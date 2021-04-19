@@ -1,0 +1,23 @@
+[package]
+name = "map-rpc"
+version = "0.1.0"
+authors = ["MAP <developers@marcopolo.link>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+jsonrpc-http-server = "14.0.6"
+jsonrpc-core = "14.0.5"
+jsonrpc-derive = "14.0.5"
+chain = { package = "chain", path = "../chain" }
+pool = { package = "pool", path = "../pool" }
+map-core = { path = "../core" }
+network = { package = "map-network", path = "../network" }
+tokio = "0.1.22"
+serde = { version = "1.0.102", features = ["derive"] }
+bincode = "1.2.0"
+serde_json = "1.0"
+log = "0.4.8"
+ed25519 = { package = "map-ed25519", path = "../common/ed25519" }
+maplit = "1.0.2"

@@ -1,0 +1,13 @@
+[package]
+name = "map-tree"
+version = "0.1.0-pre"
+license = "MIT"
+authors = ["MAP <developers@marcopolo.link>"]
+edition = "2018"
+
+[dependencies]
+starling = { version = "3.1.4", features = ["use_serde","use_serialization","use_bincode", "use_blake2b_rfc"] }
+map-store = { path = "../store" }
+serde = { version = "1.0.102", features = ["derive"] }
+rand = "0.6.5"
+#rand_os = "0.1"

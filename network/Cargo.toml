@@ -1,0 +1,33 @@
+[package]
+name = "map-network"
+version = "0.1.0"
+authors = ["kericfrank <kericfrank@outlook.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+chain = { package = "chain", path = "../chain" }
+map-core = { path = "../core" }
+pool = { package = "pool", path = "../pool" }
+bincode = "1.2.0"
+parking_lot = "0.10.0"
+error-chain = "0.12.0"
+libp2p =  { git = "https://github.com/SigP/rust-libp2p", rev = "735313ebda6a98604929f6c4606aefac19e00760" }
+serde = { version = "1.0.102", features = ["derive"] }
+slog = { version = "^2.4.1" , features = ["max_level_trace"] }
+slog-term = "^2.4.0"
+slog-async = "^2.3.0"
+tokio = "0.1.22"
+tokio-io-timeout = "0.3.1"
+futures = "0.1.25"
+dirs = "2.0.1"
+tokio-io = "0.1.12"
+smallvec = "0.6.10"
+fnv = "1.0.6"
+unsigned-varint = "0.2.2"
+sha2 = "0.8.0"
+base64 = "0.11.0"
+lru = "0.4.3"
+rand = "0.7.2"
+priority-queue = "0.7.0"

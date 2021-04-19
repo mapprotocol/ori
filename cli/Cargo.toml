@@ -1,0 +1,17 @@
+[package]
+name = "map-cli"
+version = "0.1.0"
+authors = ["MAP <developers@marcopolo.link>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+clap = "2.33.0"
+ctrlc = { version = "3.1.4", features = ["termination"] }
+logger = { package = "map-logger", path = "../common/logger" }
+service = { package = "map-service", path = "../service" }
+parking_lot = "0.10.0"
+ed25519 = { package = "map-ed25519", path = "../common/ed25519" }
+map-core = { package = "map-core", path = "../core" }
+network = { package = "map-network", path = "../network" }

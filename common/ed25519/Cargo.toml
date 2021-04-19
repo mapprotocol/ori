@@ -1,0 +1,24 @@
+[package]
+name = "map-ed25519"
+version = "0.1.0-pre"
+license = "MIT"
+authors = ["MAP <developers@marcopolo.link>"]
+edition = "2018"
+
+[dependencies]
+#ed25519-dalek = {version = "0.9", features = ["nightly"], optional = true}
+serde = { version = "1.0.102", features = ["derive"] }
+hash = { package = "map-hash", path = "../hash" }
+errors = { package = "map-errors", path = "../errors" }
+sha2 = "0.8"
+bincode = "1.2.0"
+faster-hex = "0.4"
+rand = "0.6.5"
+rand_os = "0.1"
+hex = "0.4.2"
+
+[dependencies.ed25519-dalek]
+version = "0.9"
+
+[features]
+nightly = ["ed25519-dalek/nightly"]

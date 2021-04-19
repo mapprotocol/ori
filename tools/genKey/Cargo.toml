@@ -1,0 +1,17 @@
+[package]
+name = "genkey"
+version = "1.0.0"
+authors = ["MAP <developers@marcopolo.link>"]
+edition = "2018"
+
+[dependencies]
+# rand = "0.6"
+clap = { version = "2.33.0", features = ["yaml"] }
+#clap = "2.33.0"
+ed25519 = { package = "map-ed25519", path = "../../common/ed25519" }
+hash = { package = "map-hash", path = "../../common/hash" }
+hex = "0.3"
+hex-literal = "0.2"
+
+[features]
+bench = []

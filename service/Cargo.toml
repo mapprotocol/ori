@@ -1,0 +1,25 @@
+[package]
+name = "map-service"
+version = "0.1.0"
+authors = ["MAP <developers@marcopolo.link>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+log = "0.4.8"
+core = { package = "map-core", path = "../core" }
+consensus = { package = "map-consensus", path = "../consensus" }
+chain = { package = "chain", path = "../chain" }
+rpc = { package = "map-rpc", path = "../rpc" }
+pool = { package = "pool", path = "../pool" }
+network = { package = "map-network", path = "../network" }
+executor = { package = "map-executor", path = "../executor" }
+generator = { package = "generator", path = "../generator" }
+#serde = { version = "1.0.102", features = ["derive"] }
+#bincode = "1.2.0"
+ed25519 = { package = "map-ed25519", path = "../common/ed25519" }
+#hash = { package = "map-hash", path = "../common/hash" }
+errors = { package = "map-errors", path = "../common/errors" }
+futures = "0.1.25"
+tokio = "0.1.22"

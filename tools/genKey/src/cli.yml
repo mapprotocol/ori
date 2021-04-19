@@ -1,0 +1,79 @@
+name: genkey
+author: "MAP <developers@marcopolo.link>"
+about: Utility for generating key with MAP Protocol
+args:
+  - ed25519:
+      short: e
+      long: ed25519
+      help: Use Ed25519 cryptography
+      takes_value: false
+subcommands:
+  - generate:
+      about: Generate a random account
+      args:
+        - words:
+            short: w
+            long: words
+            help: The number of words in the phrase to generate. One of 12 (default), 15, 18, 21 and 24.
+            takes_value: true
+  - sign:
+      about: "disable",Sign a message, provided on STDIN, with a given (secret) key
+      args:
+        - suri:
+            index: 1
+            required: true
+            help: The secret key URI.
+        - hex:
+            short: h
+            long: hex
+            help: The message on STDIN is hex-encoded data
+            takes_value: false
+  - verify:
+      about: "disable",Verify a signature for a message, provided on STDIN, with a given (public or secret) key
+      args:
+        - sig:
+            index: 1
+            required: true
+            help: Signature, hex-encoded.
+        - uri:
+            index: 2
+            required: true
+            help: The public or secret key URI.
+        - hex:
+            short: h
+            long: hex
+            help: The message on STDIN is hex-encoded data
+            takes_value: false
+  - sign-transaction:
+      about: "disable";Sign transaction from encoded Call. Returns a signed and encoded UncheckedMortalCompactExtrinsic as hex.
+      args:
+        - call:
+            short: c
+            long: call
+            help: The call, hex-encoded.
+            takes_value: true
+            required: true
+        - nonce:
+            short: n
+            long: nonce
+            help: The nonce.
+            takes_value: true
+            required: true
+        - suri:
+            long: suri
+            short: s
+            help: The secret key URI.
+            takes_value: true
+            required: true
+        - password:
+            short: p
+            long: password
+            takes_value: true
+            help: The password for the key.
+            required: true
+        - prior-block-hash:
+            short: h
+            long: prior-block-hash
+            help: The prior block hash, hex-encoded.
+            takes_value: true
+            required: true

@@ -1,0 +1,9 @@
+[package]
+name = "map-hash"
+version = "0.1.0-pre"
+license = "MIT"
+authors = ["MAP <developers@marcopolo.link>"]
+edition = "2018"
+
+[dependencies]
+blake2b-rs = "0.1.5"

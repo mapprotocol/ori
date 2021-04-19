@@ -1,0 +1,19 @@
+[package]
+name = "chain"
+version = "0.1.0"
+authors = ["MAP <developers@marcopolo.link>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+log = "0.4.8"
+bincode = "1.2.0"
+map-core = { path = "../core" }
+map-store = { path = "../common/store" }
+map-consensus = { path = "../consensus" }
+executor = { package = "map-executor", path = "../executor" }
+errors = { package = "map-errors", path = "../common/errors" }
+futures = "0.1"
+failure = "0.1.7"
+enum-display-derive = "0.1.0"
